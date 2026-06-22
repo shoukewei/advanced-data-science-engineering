@@ -1,0 +1,8 @@
+{
+  "model_class": "GradientBoostingRegressor",
+  "test_r2": 0.9832,
+  "training_rows": 160,
+  "target": "sales",
+  "model_name": "gradient_boosting_v1",
+  "saved_at": "2026-06-10T08:02:08.333374"
+}

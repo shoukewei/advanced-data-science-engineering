@@ -1,0 +1,83 @@
+{
+  "experiment_id": "advertising_full_pipeline_v1",
+  "seed": 42,
+  "notes": "Full end-to-end pipeline demonstration on the Advertising dataset.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/selva86/datasets/master/Advertising.csv",
+    "target": "sales",
+    "required_columns": [
+      "TV",
+      "radio",
+      "newspaper",
+      "sales"
+    ],
+    "index_col": 0
+  },
+  "splitting": {
+    "test_size": 0.2,
+    "val_size": 0.1,
+    "stratified": false,
+    "random_state": 42
+  },
+  "preprocessing": {
+    "missing": {
+      "strategies": {
+        "TV": "median",
+        "radio": "mean",
+        "newspaper": 0.0
+      },
+      "indicator_columns": []
+    },
+    "outliers": {
+      "columns": [
+        "TV",
+        "newspaper"
+      ],
+      "method": "iqr",
+      "multiplier": 1.5
+    },
+    "scaling": {
+      "columns": [
+        "TV",
+        "radio",
+        "newspaper"
+      ],
+      "method": "standard"
+    }
+  },
+  "models": {
+    "linear_regression": {
+      "class": "LinearRegression",
+      "params": {}
+    },
+    "ridge": {
+      "class": "Ridge",
+      "params": {
+        "alpha": 1.0
+      }
+    },
+    "random_forest": {
+      "class": "RandomForestRegressor",
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 5,
+        "random_state": 42
+      }
+    },
+    "gradient_boosting": {
+      "class": "GradientBoostingRegressor",
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "random_state": 42
+      }
+    }
+  },
+  "output": {
+    "experiments_dir": "experiments",
+    "registry_path": "registry/experiments.json",
+    "production_dir": "production",
+    "configs_dir": "configs",
+    "logs_dir": "logs"
+  }
+}

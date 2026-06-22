@@ -1,0 +1,18 @@
+{
+  "experiment_id": "exp_002",
+  "model_class": "Ridge",
+  "model_params": {
+    "alpha": "1.0",
+    "copy_X": "True",
+    "fit_intercept": "True",
+    "max_iter": "None",
+    "positive": "False",
+    "random_state": "None",
+    "solver": "auto",
+    "tol": "0.0001"
+  },
+  "trained_at": "2026-06-10T11:05:53.663755",
+  "training_rows": 3,
+  "notes": "Baseline Ridge experiment",
+  "status": "active"
+}

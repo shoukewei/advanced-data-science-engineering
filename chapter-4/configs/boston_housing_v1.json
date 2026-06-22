@@ -1,0 +1,76 @@
+{
+  "experiment_id": "boston_housing_v1",
+  "seed": 42,
+  "notes": "Full pipeline on the Boston Housing dataset.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv",
+    "target": "medv",
+    "required_columns": null,
+    "index_col": null
+  },
+  "splitting": {
+    "test_size": 0.2,
+    "val_size": 0.1,
+    "stratified": false,
+    "random_state": 42
+  },
+  "preprocessing": {
+    "missing": {
+      "strategies": {},
+      "indicator_columns": []
+    },
+    "outliers": {
+      "columns": [
+        "crim",
+        "lstat"
+      ],
+      "method": "iqr",
+      "multiplier": 1.5
+    },
+    "scaling": {
+      "columns": [
+        "crim",
+        "zn",
+        "indus",
+        "chas",
+        "nox",
+        "rm",
+        "age",
+        "dis",
+        "rad",
+        "tax",
+        "ptratio",
+        "b",
+        "lstat"
+      ],
+      "method": "standard"
+    }
+  },
+  "models": {
+    "linear_regression": {
+      "class": "LinearRegression",
+      "params": {}
+    },
+    "ridge": {
+      "class": "Ridge",
+      "params": {
+        "alpha": 1.0
+      }
+    },
+    "gradient_boosting": {
+      "class": "GradientBoostingRegressor",
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "random_state": 42
+      }
+    }
+  },
+  "output": {
+    "experiments_dir": "experiments",
+    "registry_path": "registry/experiments.json",
+    "production_dir": "production",
+    "configs_dir": "configs",
+    "logs_dir": "logs"
+  }
+}

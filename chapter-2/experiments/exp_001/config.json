@@ -1,0 +1,29 @@
+{
+  "preprocessing": {
+    "scaling": {
+      "method": "standard",
+      "columns": [
+        "TV",
+        "radio",
+        "newspaper"
+      ]
+    }
+  },
+  "features": [
+    "TV",
+    "radio",
+    "newspaper"
+  ],
+  "target": "sales",
+  "test_size": 0.2,
+  "random_state": 42,
+  "model": "LinearRegression",
+  "model_params": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false,
+    "tol": 1e-06
+  },
+  "training_rows": 160
+}

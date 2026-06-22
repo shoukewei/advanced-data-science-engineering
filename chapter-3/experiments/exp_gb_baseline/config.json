@@ -1,0 +1,48 @@
+{
+  "experiment_id": "exp_gb_baseline",
+  "seed": 42,
+  "data": {
+    "url": "https://raw.githubusercontent.com/selva86/datasets/master/Advertising.csv",
+    "target": "sales"
+  },
+  "splitting": {
+    "test_size": 0.2,
+    "val_size": 0.0,
+    "stratified": false
+  },
+  "preprocessing": {
+    "missing": {
+      "strategies": {
+        "TV": "median",
+        "radio": "mean",
+        "newspaper": 0.0
+      },
+      "indicator_columns": []
+    },
+    "outliers": {
+      "columns": [
+        "TV",
+        "newspaper"
+      ],
+      "method": "iqr",
+      "multiplier": 1.5
+    },
+    "scaling": {
+      "columns": [
+        "TV",
+        "radio",
+        "newspaper"
+      ],
+      "method": "standard"
+    }
+  },
+  "model": {
+    "class": "GradientBoostingRegressor",
+    "params": {
+      "n_estimators": 100,
+      "max_depth": 3,
+      "random_state": 42
+    }
+  },
+  "notes": "Baseline gradient boosting with standard preprocessing."
+}

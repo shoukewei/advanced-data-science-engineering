@@ -1,0 +1,8 @@
+{
+  "experiment_id": "exp_gb_baseline",
+  "model_class": "GradientBoostingRegressor",
+  "trained_at": "2026-06-10T11:32:01.543991",
+  "seed": 42,
+  "notes": "Baseline gradient boosting with standard preprocessing.",
+  "status": "active"
+}

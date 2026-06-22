@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp_001",
+  "model_class": "LinearRegression",
+  "model_params": {
+    "copy_X": "True",
+    "fit_intercept": "True",
+    "n_jobs": "None",
+    "positive": "False",
+    "tol": "1e-06"
+  },
+  "trained_at": "2026-06-10T11:05:53.297622",
+  "training_rows": 3,
+  "notes": "Baseline LinearRegression experiment",
+  "status": "active"
+}
