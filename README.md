@@ -98,9 +98,9 @@ Recommended:
 Clone the repository:
 
 ```bash
-git clone https://github.com/shoukewei/advanced-data-science-systems-engineering.git
+git clone https://github.com/shoukewei/advanced-data-science-engineering.git
 
-cd advanced-data-science-systems-engineering
+cd advanced-data-science-engineering
 ```
 
 Create a virtual environment:
@@ -153,19 +153,19 @@ and open the notebook provided in the chapter directory.
 
 ---
 
-## Relationship to dskit
+## Relationship to deepsim-dskit
 
 This repository demonstrates the incremental development process presented throughout the book.
 
 The production-oriented framework developed from these examples is maintained separately as:
 
 ```text
-dskit
+deepsim-dskit
 ```
 
 Readers interested in the final framework should visit:
 
-https://github.com/shoukewei/dskit
+https://github.com/shoukewei/deepsim-dskit
 
 ---
 
@@ -181,7 +181,7 @@ Constructive feedback and contributions are welcome.
 
 If you use this repository in research, teaching, or professional work, please cite:
 
-**Wei, S. (2026). Advanced Data Science Systems Engineering: Building Reproducible, Scalable, and Production-Ready Systems in Python. Deepsim Press.**
+**Wei, Shouke. 2026. Advanced Data Science Systems Engineering: Building Reproducible, Scalable, and Production-Ready Systems in Python. 1st ed. Deepsim Press. https://doi.org/10.5281/zenodo.20787832.**
 
 ---
 
@@ -198,5 +198,5 @@ Refer to the LICENSE file for details.
 **Shouke Wei, PhD** is a researcher, scientist, and entrepreneur specializing in data analysis and modeling, wavelet-based signal processing, and AI-driven applications.
 
 He earned his Ph.D. from Brandenburg University of Technology Cottbus–Senftenberg (Germany), conducted postdoctoral research at Eawag (Switzerland), held research positions at the University of British Columbia (Canada), and served as a distinguished and adjunct professor at multiple universities in China.
-
+S
 His work focuses on practical, reusable, and engineering-oriented approaches to data science, machine learning systems, and AI applications.
